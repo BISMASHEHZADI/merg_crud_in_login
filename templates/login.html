@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+
+
+{% block bisma %}
+
+<h1 class="alert alert-warning bg bg-info text-center text-black">LOGIN PAGE</h1>
+<style>
+    .gradient-custom-2 {
+        /* fallback for old browsers */
+        background:#dd3675;
+        
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to left, #ee2478, #d87736, #8436dd, #4591b4);
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, #b11362, #9e1661,pink, #b49a45);
+      
+        }
+        
+        @media (min-width: 768px) {
+        .gradient-form {
+        height: 100vh;
+        background: linear-gradient(to left ,rgb(255, 38, 0),rgb(238, 255, 0),green,rgb(0, 225, 255));
+        }
+        }
+        @media (min-width: 769px) {
+        .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        }
+        
+        }
+
+</style>
+<form action="" method="POST">
+  {% csrf_token %}
+<section class="gradient-form" style="background: linear-gradient(to right,rgb(22, 51, 58),rgb(185, 194, 189),rgb(81, 102, 134),rgb(151, 217, 229));">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black bg bg-dark" style="background: linear-gradient(to left,red,green,blue,yellow);">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <h3 class="mt-1 mb-4 pb-3 alert alert-primary">We are The Job Finder Team</h3>
+                  </div>
+  
+                  <form>
+                    <p class="alert alert-info text-center">Please login to your account</p>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text"  id="form2Example11" name = 'uname' class="form-control"
+                        placeholder="enter your name" />
+                      <label class="form-label" for="form2Example11">Username</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example22" name="password" class="form-control" />
+                      <label class="form-label" for="form2Example22">Password</label>
+                    </div>
+  
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-danger" type="submit">Log
+
+                        in</button>
+                        <a href="{% url 'logout'%}" class="btn btn-danger">logout</a>
+                        <p class="mb-0 me-2">Don't have an account?</p>
+                        <a href="{% url 'register' %}" class="btn btn-danger">create</a>
+                    </div>
+  
+                    
+  
+                  </form>
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-black px-3 py-4 p-md-5 mx-md-4">
+                  <h2 class="mb-4">Bisma's point of views</h2>
+                  <p class="small mb-0">We want that everyone get rid from the time wasting websites. Our aim is that we find job for you.We think that nothing is impossible in world.Everything is possible if we would not lose heart. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+
+
+
+
+{% endblock bisma %}
+    
