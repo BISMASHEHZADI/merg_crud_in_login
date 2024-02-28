@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block bisma %}
+<div class="row">
+<div class="col-sm-7">
+
+<h1 class="alert alert-info text-center">UPDATE JOB FINDERS DATA</h1>
+<form action="" method="POST">
+
+    
+{{form.as_p}}
+{% csrf_token %}
+<button type="submit" class="btn btn-dark">update</button>
+
+<a href="{% url 'add' %}" class="btn btn-primary">GO BACK TO HOME</a>
+
+</form>
+
+    
+</div>
+
+
+
+</div>
+
+
+
+{% endblock bisma %}
