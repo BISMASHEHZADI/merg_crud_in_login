@@ -47,8 +47,7 @@
     
     <form action="{% url 'delete' i.id %}" method="POST">
         {% csrf_token %}
-    <td><a href="{% url 'update' i.id %}" class="btn btn-danger">edit</a></td>
-    <td><button type="submit" class="btn btn-warning">delete</button></td>
+<td><a href="{% url 'update' i.id %}" class="btn btn-danger">edit</a> <button type="submit" class="btn btn-warning">delete</button></td>
         
     </form>
     
